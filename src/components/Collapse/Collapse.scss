@@ -1,0 +1,41 @@
+.collapse {
+  width: 582px;
+}
+
+.collapse-header {
+  width: 100%;
+  height: 52px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  background: #ff6060;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+
+  img {
+    width: 24px;
+    height: auto;
+  }
+}
+
+.collapse-content {
+  padding: 25px 20px;
+  background: #f6f6f6;
+  color: #000;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.arrow {
+  transform: rotate(180deg);
+  &.open {
+    transform: rotate(0deg);
+  }
+}
