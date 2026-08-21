@@ -1,7 +1,21 @@
+import "./Home.scss";
+import Banner from "../../components/Banner/Banner";
+import Card from "../../components/Card/Card";
+import logements from "../../data/logements.json";
+
 function Home() {
   return (
     <main>
-      <h1>Page d'accueil</h1>
+      <Banner />
+      <section className="gallery">
+        {logements.map((logement) => (
+          <Card
+            key={logement.id}
+            title={logement.title}
+            cover={logement.cover}
+          />
+        ))}
+      </section>
     </main>
   );
 }

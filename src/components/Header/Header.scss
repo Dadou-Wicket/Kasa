@@ -11,15 +11,15 @@ header {
 
   nav {
     display: flex;
-    gap: 57px;
+    gap: 40px;
 
     a {
-      font-family: "Montserrat", sans-serif;
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 143%;
       color: #000;
-      text-decoration: underline;
+      text-decoration: none;
+
+      &.active {
+        text-decoration: underline;
+      }
     }
   }
 }
