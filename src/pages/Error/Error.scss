@@ -1,0 +1,40 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+
+  h1 {
+    width: 597px;
+    height: 263px;
+    margin: 139px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff6060;
+    font-family: "Montserrat", sans-serif;
+    font-size: 288px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  p {
+    margin: 139px 0 0;
+    color: #ff6060;
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 143%;
+  }
+
+  a {
+    margin: 139px 0 139px;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 143%;
+    text-decoration: underline;
+  }
+}

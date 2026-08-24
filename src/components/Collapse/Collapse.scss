@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: space-between;
     font-family: "Montserrat", sans-serif;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 143%;
     cursor: pointer;
@@ -57,6 +57,14 @@
 
     .collapse-content-inner {
       padding: 20px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .collapse {
+    .collapse-header {
+      font-size: 18px;
     }
   }
 }
