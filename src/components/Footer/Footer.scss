@@ -20,3 +20,27 @@ footer {
     line-height: 143%;
   }
 }
+
+@media (max-width: 768px) {
+  footer {
+    height: 209px;
+
+    img {
+      width: 133.59px;
+      height: 46px;
+      margin-top: 58px;
+    }
+
+    p {
+      width: 133.59px;
+      height: 46px;
+      margin: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      font-size: 12px;
+      line-height: 143%;
+      text-align: center;
+    }
+  }
+}
