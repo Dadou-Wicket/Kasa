@@ -1,6 +1,7 @@
 .logement {
   width: 1240px;
-  margin: 50px 100px 0;
+  margin: 50px auto 0;
+  padding-bottom: 50px;
 }
 
 .logement-image {
@@ -36,15 +37,20 @@
 .logement-title {
   h1 {
     margin: 0;
+    font-family: "Montserrat", sans-serif;
     font-size: 36px;
     font-weight: 500;
+    line-height: 143%;
     color: #ff6060;
   }
 
   p {
-    margin: 5px 0 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
     font-size: 18px;
     font-weight: 500;
+    line-height: 143%;
+    color: #000;
   }
 }
 
@@ -56,12 +62,13 @@
   span {
     min-width: 115px;
     padding: 3px 10px;
-    box-sizing: border-box;
     border-radius: 10px;
-    background: #ff6060;
+    background-color: #ff6060;
     color: #fff;
+    font-family: "Montserrat", sans-serif;
     font-size: 14px;
     font-weight: 700;
+    line-height: 143%;
     text-align: center;
   }
 }
@@ -73,8 +80,10 @@
 
   p {
     margin: 0;
+    font-family: "Montserrat", sans-serif;
     font-size: 18px;
     font-weight: 500;
+    line-height: 143%;
     color: #ff6060;
     text-align: right;
   }
@@ -107,5 +116,5 @@
 .logement-collapses {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 20px;
 }
