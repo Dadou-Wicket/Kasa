@@ -4,8 +4,10 @@ import arrow from "../../assets/arrow.svg";
 
 function Slideshow({ pictures, title }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState("next");
 
   function previousSlide() {
+    setDirection("previous");
     if (currentIndex === 0) {
       setCurrentIndex(pictures.length - 1);
     } else {
@@ -14,6 +16,7 @@ function Slideshow({ pictures, title }) {
   }
 
   function nextSlide() {
+    setDirection("next");
     if (currentIndex === pictures.length - 1) {
       setCurrentIndex(0);
     } else {
@@ -23,7 +26,12 @@ function Slideshow({ pictures, title }) {
 
   return (
     <div className="slideshow">
-      <img src={pictures[currentIndex]} alt={title} />
+      <img
+        key={currentIndex}
+        className={`slideshow-image ${direction}`}
+        src={pictures[currentIndex]}
+        alt={title}
+      />
       {pictures.length > 1 && (
         <>
           <button className="slideshow-previous" onClick={previousSlide}>
