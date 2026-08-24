@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: space-between;
     font-family: "Montserrat", sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 143%;
     cursor: pointer;
@@ -22,7 +22,7 @@
     img {
       width: 24px;
       height: auto;
-      transform: rotate(180deg);
+      transform: rotate(0deg);
       transition: transform 0.3s ease;
     }
   }
@@ -47,7 +47,7 @@
   &.open {
     .collapse-header {
       img {
-        transform: rotate(0deg);
+        transform: rotate(180deg);
       }
     }
 

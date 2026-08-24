@@ -4,6 +4,7 @@ import "./Logement.scss";
 import starActive from "../../assets/star-active.svg";
 import starInactive from "../../assets/star-inactive.svg";
 import Collapse from "../../components/Collapse/Collapse";
+import Slideshow from "../../components/Slideshow/Slideshow";
 
 function Logement() {
   const { id } = useParams();
@@ -15,9 +16,7 @@ function Logement() {
 
   return (
     <main className="logement">
-      <div className="logement-image">
-        <img src={logement.cover} alt={logement.title} />
-      </div>
+      <Slideshow pictures={logement.pictures} title={logement.title} />
       <section className="logement-info">
         <div className="logement-left">
           <div className="logement-title">
@@ -50,7 +49,6 @@ function Logement() {
       </section>
       <div className="logement-collapses">
         <Collapse title="Description">{logement.description}</Collapse>
-
         <Collapse title="Équipements">
           {logement.equipments.map((equipment) => (
             <p key={equipment}>{equipment}</p>

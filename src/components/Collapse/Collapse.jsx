@@ -1,5 +1,5 @@
 import { useState } from "react";
-import arrow from "../../assets/arrow.svg";
+import arrowCollapse from "../../assets/arrow-collapse.svg";
 import "./Collapse.scss";
 
 function Collapse({ title, children }) {
@@ -9,7 +9,7 @@ function Collapse({ title, children }) {
     <div className={`collapse ${isOpen ? "open" : ""}`}>
       <button className="collapse-header" onClick={() => setIsOpen(!isOpen)}>
         <span>{title}</span>
-        <img src={arrow} alt="" />
+        <img src={arrowCollapse} alt="" />
       </button>
 
       <div className="collapse-content">
