@@ -31,7 +31,11 @@ function Logement() {
         </div>
         <div className="logement-right">
           <div className="logement-host">
-            <p>{logement.host.name}</p>
+            <p>
+              {logement.host.name.split(" ")[0]}
+              <br />
+              {logement.host.name.split(" ")[1]}
+            </p>
             <img src={logement.host.picture} alt={logement.host.name} />
           </div>
           <div className="logement-rating">
