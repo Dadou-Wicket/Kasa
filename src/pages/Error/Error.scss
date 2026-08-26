@@ -2,13 +2,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 139px;
+  padding: 139px 0;
+  box-sizing: border-box;
   text-align: center;
   font-family: "Montserrat", sans-serif;
 
   h1 {
     width: 597px;
     height: 263px;
-    margin: 139px 0 0;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +23,7 @@
   }
 
   p {
-    margin: 139px 0 0;
+    margin: 0;
     color: #ff6060;
     font-family: "Montserrat", sans-serif;
     font-size: 36px;
@@ -29,12 +32,46 @@
   }
 
   a {
-    margin: 139px 0 139px;
+    margin: 0;
     color: #000;
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
     font-weight: 500;
     line-height: 143%;
     text-decoration: underline;
+  }
+}
+
+@media (max-width: 768px) {
+  .error {
+    width: 335px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 113px;
+
+    h1 {
+      width: 198px;
+      height: 99px;
+      margin-top: 113px;
+      font-size: 96px;
+      line-height: 143%;
+    }
+
+    p {
+      width: 260px;
+      height: 52px;
+      margin: 0;
+      font-size: 18px;
+      line-height: 143%;
+    }
+
+    a {
+      width: 221px;
+      margin: 0 0 113px;
+      font-size: 14px;
+      line-height: 143%;
+    }
   }
 }
