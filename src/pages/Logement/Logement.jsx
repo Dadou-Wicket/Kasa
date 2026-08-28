@@ -12,7 +12,7 @@ function Logement() {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/properties/${id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/properties/${id}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Logement introuvable");

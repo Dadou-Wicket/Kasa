@@ -7,9 +7,17 @@ function Home() {
   const [logements, setLogements] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/properties")
-      .then((response) => response.json())
-      .then((data) => setLogements(data));
+    fetch(`${import.meta.env.VITE_API_URL}/properties`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Impossible de récupérer les logements");
+        }
+        return response.json();
+      })
+      .then((data) => setLogements(data))
+      .catch((error) => {
+        console.error(error);
+      });
   }, []);
 
   return (
