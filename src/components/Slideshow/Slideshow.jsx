@@ -32,6 +32,7 @@ function Slideshow({ pictures, title }) {
         src={pictures[currentIndex]}
         alt={title}
       />
+
       {pictures.length > 1 && (
         <>
           <button className="slideshow-previous" onClick={previousSlide}>

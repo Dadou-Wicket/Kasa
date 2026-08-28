@@ -1,11 +1,19 @@
+import { useState, useEffect } from "react";
 import "./Home.scss";
 import Banner from "../../components/Banner/Banner";
 import Card from "../../components/Card/Card";
-import logements from "../../data/logements.json";
 
 function Home() {
+  const [logements, setLogements] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8080/api/properties")
+      .then((response) => response.json())
+      .then((data) => setLogements(data));
+  }, []);
+
   return (
-    <main>
+    <>
       <Banner />
       <section className="gallery">
         {logements.map((logement) => (
@@ -17,7 +25,7 @@ function Home() {
           />
         ))}
       </section>
-    </main>
+    </>
   );
 }
 

@@ -1,5 +1,5 @@
 .collapse {
-  width: 582px;
+  width: 100%;
 
   .collapse-header {
     width: 100%;
@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: "Montserrat", sans-serif;
+    font-family: inherit;
     font-size: 18px;
     font-weight: 700;
     line-height: 143%;
@@ -36,7 +36,6 @@
   .collapse-content-inner {
     overflow: hidden;
     padding: 0 20px;
-    font-family: "Montserrat", sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 143%;

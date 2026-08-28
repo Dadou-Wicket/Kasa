@@ -1,5 +1,5 @@
+import { useEffect, useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
-import logements from "../../data/logements.json";
 import "./Logement.scss";
 import starActive from "../../assets/star-active.svg";
 import starInactive from "../../assets/star-inactive.svg";
@@ -8,9 +8,22 @@ import Slideshow from "../../components/Slideshow/Slideshow";
 
 function Logement() {
   const { id } = useParams();
-  const logement = logements.find((logement) => logement.id === id);
+  const [logement, setLogement] = useState(null);
+  const [error, setError] = useState(false);
 
-  if (!logement) {
+  useEffect(() => {
+    fetch(`http://localhost:8080/api/properties/${id}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Logement introuvable");
+        }
+        return response.json();
+      })
+      .then((data) => setLogement(data))
+      .catch(() => setError(true));
+  }, [id]);
+  // Redirige vers la page 404 si l'API ne trouve pas le logement
+  if (error) {
     return <Navigate to="/404" />;
   }
 
@@ -32,9 +45,9 @@ function Logement() {
         <div className="logement-right">
           <div className="logement-host">
             <p>
-              {logement.host.name.split(" ")[0]}
+              {logement.host.name?.split(" ")[0]}
               <br />
-              {logement.host.name.split(" ")[1]}
+              {logement.host.name?.split(" ")[1]}
             </p>
             <img src={logement.host.picture} alt={logement.host.name} />
           </div>

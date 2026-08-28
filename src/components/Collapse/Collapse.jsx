@@ -11,7 +11,6 @@ function Collapse({ title, children }) {
         <span>{title}</span>
         <img src={arrowCollapse} alt="" />
       </button>
-
       <div className="collapse-content">
         <div className="collapse-content-inner">{children}</div>
       </div>
