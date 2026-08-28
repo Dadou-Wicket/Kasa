@@ -26,6 +26,9 @@ function Logement() {
   if (error) {
     return <Navigate to="/404" />;
   }
+  if (!logement) {
+    return null;
+  }
 
   return (
     <main className="logement">
