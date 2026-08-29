@@ -26,6 +26,7 @@ function Logement() {
   if (error) {
     return <Navigate to="/404" />;
   }
+  // Attend que les données du logement soient chargées avant de les afficher
   if (!logement) {
     return null;
   }
