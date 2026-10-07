@@ -1,16 +1,87 @@
-# React + Vite
+# Kasa
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projet réalisé dans le cadre de ma formation de développeur web.
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Refonte du site Kasa, une plateforme de location immobilière, avec React
+à partir de maquettes Figma fournies pour les versions desktop et mobile.
 
-## React Compiler
+Les données nécessaires au fonctionnement de l'application sont récupérées
+depuis une API.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies
 
-## Expanding the ESLint configuration
+- React
+- Sass
+- React Router
+- API REST
+- Vite
+- JavaScript
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Fonctionnalités
+
+- Navigation entre les différentes pages avec React Router
+- Récupération dynamique des logements depuis l'API
+- Affichage des logements avec des composants réutilisables
+- Pages de détail générées dynamiquement
+- Carousel d'images avec navigation
+- Affichage dynamique des notes et des équipements
+- Composants Collapse réutilisables
+- Gestion des erreurs et page 404
+- Adaptation responsive pour desktop et mobile
+
+## Organisation du projet
+
+L'application est organisée en plusieurs composants, pages et éléments
+réutilisables afin de séparer les différentes responsabilités.
+
+Un Layout commun permet notamment de gérer le Header, le contenu des pages
+et le Footer.
+
+React Router est utilisé pour gérer les différentes routes de l'application.
+
+## Gestion des données
+
+Les données sont récupérées depuis l'API à l'aide de `fetch`.
+
+`useEffect` permet de déclencher les requêtes lors du chargement des composants
+et `useState` permet de stocker les données récupérées.
+
+Les logements sont affichés dynamiquement grâce à des composants réutilisables
+et aux props transmises entre les composants.
+
+## Composants interactifs
+
+Plusieurs composants interactifs ont été développés :
+
+- Carousel d'images avec navigation entre les photos
+- Composant Collapse réutilisable
+- Affichage dynamique des notes
+- Gestion des erreurs et redirection vers une page 404
+
+## Responsive design
+
+L'application a été développée à partir des maquettes Figma desktop et mobile.
+
+L'utilisation de Sass et de media queries permet d'adapter l'interface aux
+différentes tailles d'écran.
+
+## Compétences développées
+
+Ce projet m'a permis d'approfondir :
+
+- React
+- Création et réutilisation de composants
+- Hooks `useState` et `useEffect`
+- React Router
+- Communication avec une API REST
+- Gestion des données dynamiques
+- Gestion des états
+- Sass
+- Responsive design
+- Gestion des erreurs et des routes 404
+
+## Auteur
+
+David Maron
